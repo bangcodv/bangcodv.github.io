@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter</title>
+	
+	<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.css">
+
+
+	  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+
+
+	<div class="container">
+		<div class="row" style="height:100vh;">
+
+			<div class="col-md-12  align-self-center" style="height: 400px">
+				<div class="row" >
+
+					<!-- colum begginner -->
+					<div id="begginnerCard" class="col-3" style="border:1px solid #ffffff ; height: 400px; background: #000000; ;box-shadow: 5px 10px #212121; padding: 10px">
+						
+						<div style="height: 30%;" class="my-font">
+							<h5>Beginer  | <small id="beginnerKomando"></small></h5>
+
+							<form class="form-inline" name="begginnerForm" >
+								<input type="number" class="form-control" id="email" size="2" maxlength="4" placeholder="set komando ..." name="vkBeg">
+								<a class="btn btn-success btn-sm ml-1" href="#" onclick="document.getElementById('beginnerKomando').innerHTML='komando : '+checkBeginner()">atur</a>
+
+							</form>
+							<small class="form-text text-muted">Atur Komando di form ini </small>
+
+						</div>
+						<hr>
+
+						<div class="row align-items-center" style="height:40%">
+							
+							<div class="col-12">
+								<h1 style="text-align: center; font-size: 5em;" class="my-font" id="beginnerV">0</h1>
+							</div>
+
+						</div>
+
+						<hr>
+
+						<div style="height: 30%;">
+							<div class="row">
+
+								<!-- icon plus -->
+								<div class="col-sm-3 mybutton">
+									<div class="round round-lg green" onclick="document.getElementById('beginnerV').innerHTML=reductionB()">
+										<i class="fa fa-minus" aria-hidden="true"></i>
+									</div>
+								</div>
+								<!-- end icon plus -->
+
+								<!-- icon min -->
+								<div class="col-sm-3 mybutton">
+									<div class="round round-lg orange" onclick="document.getElementById('beginnerV').innerHTML=sumB()">
+										<i class="fa fa-plus" aria-hidden="true"></i>
+									</div>
+								</div>
+
+								<div class="col-sm-3 mybutton"></div>
+
+								<div class="col-sm-3 mybutton">
+									<div class="round round-lg blue" onclick="document.getElementById('beginnerV').innerHTML=refreshB()">
+										<i class="fa fa-refresh" aria-hidden="true"></i>
+									</div>
+								</div>
+								<!-- end icon min -->
+
+							</div>
+
+						</div>
+						
+					</div>
+
+					<!-- end begginner -->
+
+
+					<!-- colum explorer -->
+					<div id="explorerCard" class="col-3" style="border:1px solid #ffffff ; height: 400px; background: #000000; ;box-shadow: 5px 10px #212121; padding: 10px">
+						
+						<div style="height: 30%;" class="my-font">
+							<h5>Explorer  | <small id="explorerKomando"></small></h5>
+
+							<form class="form-inline" name="explorerForm">
+								<input type="number" class="form-control" id="email" size="2" maxlength="4" placeholder="set komando ..." name="vkExplorer">
+								<a class="btn btn-success btn-sm ml-1" href="#" onclick="document.getElementById('explorerKomando').innerHTML='komando : '+checkExplorer()">atur</a>
+
+							</form>
+							<small class="form-text text-muted">Atur Komando di form ini </small>
+
+						</div>
+						<hr>
+
+						<div class="row align-items-center" style="height:40%">
+							
+							<div class="col-12">
+								<h1 style="text-align: center; font-size: 5em;" class="my-font" id="explorerV">0</h1>
+							</div>
+
+						</div>
+
+						<hr>
+
+						<div style="height: 30%;">
+							<div class="row">
+
+								<!-- icon plus -->
+								<div class="col-sm-3 mybutton">
+									<div class="round round-lg green" onclick="document.getElementById('explorerV').innerHTML=reductionExplorer()">
+										<i class="fa fa-minus" aria-hidden="true"></i>
+									</div>
+								</div>
+								<!-- end icon plus -->
+
+								<!-- icon min -->
+								<div class="col-sm-3 mybutton">
+									<div class="round round-lg orange" onclick="document.getElementById('explorerV').innerHTML=sumExplorer()">
+										<i class="fa fa-plus" aria-hidden="true"></i>
+									</div>
+								</div>
+
+								<div class="col-sm-3 mybutton"></div>
+
+								<div class="col-sm-3 mybutton">
+									<div class="round round-lg blue" onclick="document.getElementById('explorerV').innerHTML=refreshExplorer()">
+										<i class="fa fa-refresh" aria-hidden="true"></i>
+									</div>
+								</div>
+								<!-- end icon min -->
+
+							</div>
+
+						</div>
+						
+					</div>
+
+					<!-- end explorer -->
+
+					<!-- colum advance -->
+					<div id="advanceCard" class="col-3" style="border:1px solid #ffffff ; height: 400px; background: #000000; ;box-shadow: 5px 10px #212121; padding: 10px">
+						
+						<div style="height: 30%;" class="my-font">
+							<h5>Advance  | <small id="advanceKomando"></small></h5>
+
+							<form class="form-inline" name="advanceForm">
+								<input type="number" class="form-control" id="komando" size="2" maxlength="4" placeholder="set komando ..." name="vkAdvance">
+								<a class="btn btn-success btn-sm ml-1" href="#" onclick="document.getElementById('advanceKomando').innerHTML='komando : '+checkAdvance()">atur</a>
+
+							</form>
+							<small class="form-text text-muted">Atur Komando di form ini </small>
+
+						</div>
+						<hr>
+
+						<div class="row align-items-center" style="height:40%">
+							
+							<div class="col-12">
+								<h1 style="text-align: center; font-size: 5em;" class="my-font" id="advanceV">0</h1>
+							</div>
+
+						</div>
+
+						<hr>
+
+						<div style="height: 30%;">
+							<div class="row">
+
+								<!-- icon plus -->
+								<div class="col-sm-3 mybutton">
+									<div class="round round-lg green" onclick="document.getElementById('advanceV').innerHTML=reductionAdvance()">
+										<i class="fa fa-minus" aria-hidden="true"></i>
+									</div>
+								</div>
+								<!-- end icon plus -->
+
+								<!-- icon min -->
+								<div class="col-sm-3 mybutton">
+									<div class="round round-lg orange" onclick="document.getElementById('advanceV').innerHTML=sumAdvance()">
+										<i class="fa fa-plus" aria-hidden="true"></i>
+									</div>
+								</div>
+
+								<div class="col-sm-3 mybutton"></div>
+
+								<div class="col-sm-3 mybutton">
+									<div class="round round-lg blue" onclick="document.getElementById('advanceV').innerHTML=refreshAdvance()">
+										<i class="fa fa-refresh" aria-hidden="true"></i>
+									</div>
+								</div>
+								<!-- end icon min -->
+
+							</div>
+
+						</div>
+						
+					</div>
+
+					<!-- end advance -->
+
+					<!-- colum excelent -->
+					<div id="excelentCard" class="col-3" style="border:1px solid #ffffff ; height: 400px; background: #000000; ;box-shadow: 5px 10px #212121; padding: 10px">
+						
+						<div style="height: 30%;" class="my-font">
+							<h5>Excelent  | <small id="excelentKomando"></small></h5>
+
+							<form class="form-inline" name="excelentForm">
+								<input type="number" class="form-control" id="komando" size="2" maxlength="4" placeholder="set komando ..." name="vkExcelent">
+								<a class="btn btn-success btn-sm ml-1" href="#" onclick="document.getElementById('excelentKomando').innerHTML='komando : '+checkExcelent()">atur</a>
+
+							</form>
+							<small class="form-text text-muted">Atur Komando di form ini </small>
+
+						</div>
+						<hr>
+
+						<div class="row align-items-center" style="height:40%">
+							
+							<div class="col-12">
+								<h1 style="text-align: center; font-size: 5em;" class="my-font" id="excelentV">0</h1>
+							</div>
+
+						</div>
+
+						<hr>
+
+						<div style="height: 30%;">
+							<div class="row">
+
+								<!-- icon plus -->
+								<div class="col-sm-3 mybutton">
+									<div class="round round-lg green" onclick="document.getElementById('excelentV').innerHTML=reductionExcelent()">
+										<i class="fa fa-minus" aria-hidden="true"></i>
+									</div>
+								</div>
+								<!-- end icon plus -->
+
+								<!-- icon min -->
+								<div class="col-sm-3 mybutton">
+									<div class="round round-lg orange" onclick="document.getElementById('excelentV').innerHTML=sumExcelent()">
+										<i class="fa fa-plus" aria-hidden="true"></i>
+									</div>
+								</div>
+
+								<div class="col-sm-3 mybutton"></div>
+
+								<div class="col-sm-3 mybutton">
+									<div class="round round-lg blue" onclick="document.getElementById('excelentV').innerHTML=refreshExcelent()">
+										<i class="fa fa-refresh" aria-hidden="true"></i>
+									</div>
+								</div>
+								<!-- end icon min -->
+
+							</div>
+
+						</div>
+						
+					</div>
+
+					<!-- end advance -->
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<hr style="background: black;">
+
+		<footer style="font-size: 12px">
+			<p>&copy;copyright 2018, <a href="#">bangcode</a></p>
+		</footer>
+	</div>
+
+
+
+	
+
+	<!-- javascript -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	
+
+</body>
+</html>
