@@ -5,6 +5,11 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/cover.css">
+	<link href="assets/css/sequence/sequence-theme.modern-slide-in.css" rel="stylesheet" media="all">
+
+
+
+
 </head>
 <body>
 	<div class="container">
@@ -18,7 +23,7 @@
 						<span style="font-size: 14px; margin-left: 5px" >Orion Techno</span>
 					</a>
 					<nav class="nav nav-masthead justify-content-center">
-						<a class="nav-link active" href="#">About</a>
+						<a class="nav-link" href="#">About</a>
 						<a class="nav-link" href="#">Service</a>
 						<a class="nav-link" href="#">Portfolio</a>
 						<a class="nav-link" href="#">Our Team</a>
@@ -29,10 +34,60 @@
 
 			<main role="main" class="inner cover">
 
-				<div class="row">
+				<div id="sequence" class="seq">
+
+					<div class="seq-screen">
+						<ul class="seq-canvas">
+							<li class="seq-in">
+								<div class="seq-model">
+									<img data-seq src="assets/image/mobile.png" alt=""  />
+								</div>
+
+								<div class="seq-title">
+									<h2 data-seq>Mobile Development</h2>
+									<h3 data-seq ">We create applications that can simplify activities and monitor business, all within your grasp. <br><a href="#" class="btn btn-xs btn-success" style="font-size: 14px; background: black; border-color: black;" > Learn More</a></h3>
+
+								</div>
+							</li>
+
+							<li class="seq-in">
+
+								<div class="seq-model">
+									<img data-seq src="assets/image/webdev.png" alt=""/>
+								</div>
+
+								<div class="seq-title">
+									<h2 data-seq>Web Development</h2>
+									<h3 data-seq>Enable you to manage the company to improve the existence, functionality and effectiveness of the company <br><a href="#" class="btn btn-xs btn-success" style="font-size: 14px; background: black; border-color: black;""> Learn More</a></h3>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					
+
+					<ul role="navigation" aria-label="Pagination" class="seq-pagination">
+						<li><a href="#step1" rel="step1" title="Go to slide 1"><img src="assets/image/mobile.png" style="width: 30px; " /></a></li>
+						<li><a href="#step2" rel="step2" title="Go to slide 2"><img src="assets/image/webdev.png" style="width: 50px; "/></a></li>
+				<!-- 		<li><a href="#step3" rel="step3" title="Go to slide 3"><img src="assets/image/tn-model3.png" /></a></li> -->
+					</ul>
+
+				</div>
+
+				
+				<fieldset class="seq-nav" aria-controls="sequence" aria-label="Slider buttons">
+					<span  class="seq-prev" aria-label="Previous"></span>
+					<span  class="seq-next" aria-label="Next"></span>
+				</fieldset>
+
+
+
+
+				<!-- <div class="row">
 
 
 					<div class="col-7 mt-auto">
+
 						<h1 class="cover-heading">Mobile Developtment</h1>
 						<p class="lead">Make your custom app to help your business.</p>
 						<p class="lead">
@@ -43,9 +98,9 @@
 					<div class="col-5s mt-auto ml-auto">
 						<img src="assets/image/mobile.png" class="rounded mx-auto d-block" width="200px">
 					</div>
-				</div>
+				</div> -->
 
-				
+
 			</main>
 
 			<footer class="mastfoot mt-auto" style="text-align: center; font-size: 14px">
@@ -61,5 +116,12 @@
 	<script type="text/javascript" src="assets/js/jquery-3.2.1.slim.min.js"></script>
 	<script type="text/javascript" src="assets/js/popper.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+
+	<!-- sequence -->
+	<script src="assets/js/sequence/imagesloaded.pkgd.min.js"></script>
+	<script src="assets/js/sequence/hammer.min.js"></script>
+	<script src="assets/js/sequence/sequence.min.js"></script>
+	<script src="assets/js/sequence/sequence-theme.modern-slide-in.js"></script>
+
 </body>
 </html>
