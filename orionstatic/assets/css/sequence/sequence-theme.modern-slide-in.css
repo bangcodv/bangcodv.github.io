@@ -109,7 +109,7 @@ html,
 .seq .seq-nav,
 .seq .seq-pagination {
   /* Hide navigation when JS is disabled */
-  display: none;
+  /*display: none;*/
 }
 
 .seq.seq-active .seq-nav {
@@ -147,14 +147,14 @@ html,
   transform: translate3d(0, 0, 0);
   /* Image replacement */
   border: 0;
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
+  /*font: 0/0 a;*/
+  /*text-shadow: none;*/
+  /*color: transparent;*/
 }
 
 .seq .seq-next {
   right: 20px;
-  background: url("../../image/bt-next.png");
+  /*background: url("../../image/next.png");*/
 }
 
 .seq .seq-next:focus,
@@ -166,7 +166,7 @@ html,
 
 .seq .seq-prev {
   left: 20px;
-  background: url("../../image/bt-prev.png");
+  /*background: url("../../image/back.png");*/
 }
 
 .seq .seq-prev:focus,
@@ -512,13 +512,13 @@ html,
   }
 
   .seq .seq-next {
-    background: url("../../image/bt-next@2x.png");
-    background-size: 35px 66px;
+   /* background: url("../../image/next.png");
+    background-size: 35px 66px;*/
   }
 
   .seq .seq-prev {
-    background: url("../../image/bt-prev@2x.png");
-    background-size: 35px 66px;
+  /*  background: url("../../image/back.png");
+    background-size: 35px 66px;*/
   }
 }
 
