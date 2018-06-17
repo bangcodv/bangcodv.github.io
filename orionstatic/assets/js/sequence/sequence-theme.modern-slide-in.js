@@ -24,7 +24,7 @@ var sequenceElement = document.getElementById("sequence");
 // Place your Sequence options here to override defaults
 // See: http://sequencejs.com/documentation/#options
 var options = {
-	autoPlay:true,
+	// autoPlay:true,
 	autoPlayInterval:2000,
 	animateCanvas: false,
 	phaseThreshold: false,
